@@ -1,8 +1,7 @@
 #threads list in Java experiments
-thread_list=[1,16,32,76]
+threads_list=[1,16,32,76]
 #threads set in experiments of Figure 4k
 worker_threads_4k=76
-threads_list=[1,16,32,76]
 #JVM_memory
 Mem="300G"
 #rq_size, rq_threads and update_threads
