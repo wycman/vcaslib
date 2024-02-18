@@ -1,11 +1,11 @@
-
+#Java_implementations_test
 printf "Testing Java implementations...\n"
 cd java/build
 java -server -ea -Xms1G -Xmx1G -Xbootclasspath/a:'../lib/scala-library.jar:../lib/deuceAgent.jar' -jar experiments_instr.jar test
 cd ../..
 printf "Finished testing Java implementations\n"
 
-
+#C++_implementations_test
 printf "Testing C++ implementations...\n"
 cd cpp/microbench
 printf "\nTesting VcasBST:\n"
