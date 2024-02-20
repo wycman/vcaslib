@@ -31,14 +31,11 @@
 	 make install
 2.运行			
 （1）进入项目主目录（/vcaslib/artifact）
-
 （2）编译C++与Java实现的代码：运行脚本文件compile_all.sh
 	 bash compile_all.sh
-
 （3）经过编译后，运行run_all_tests.sh脚本进行软件测试：
 	 bash run_all_tests.sh
 	 你可以在expected_output目录下查看编译结果及测试结果。
-
 额外说明：
 **具体来说，run_all_tests可以快捷启动Java与C++实验部分的测试。**
 **对于Java实施测试部分（run_all_tests.sh中3到5行）**
@@ -47,7 +44,6 @@
 **对于C++实施测试部分（run_all_tests.sh中9到18行）**
 **分别评估C++环境下实现的Vcasbst、Epochbst及Bst算法的性能表现。**
 **在cpp/microbench目录下的run-experiment及run-experiment-memory文件中展示了进行C++算法测试时所调用的不同变量及它们之间的不同参数组合。**
-
 （4）复现实验结果
 	  我们汇总了实验中的一些超参数，它们可以在generate_graphs_from_paper.sh文件找到，这是一个可以快速启动并复现论文中所有实验的脚本，根据当前的服务器状况修改在复现实验时使用到的部分参数：
 	  在脚本文件中，是一系列python命令行代码，用以快捷开启实验。使用到的自定义参数包括：
