@@ -9,8 +9,8 @@
 	操作系统：Ubuntu 20.04.6
 	其他软件：jemalloc 5.2.1（用于C++实施部分时的可伸缩内存分配），集成mathplotlib的Python3（用于运行试验、测试脚本及相关图表绘制），numactl工具（为了防止 CPU 资源争抢引发性能降低的问题）
 	实验时间：大约20小时。
+	
 二、代码运行
-
 1.准备工作
 （1）安装g++-9
 	sudo apt-get install -y g++-9
