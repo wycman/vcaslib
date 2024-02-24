@@ -35,7 +35,7 @@
 	 bash compile_all.sh
 （3）经过编译后，运行run_all_tests.sh脚本进行软件测试：
 	 bash run_all_tests.sh
-	 你可以在expected_output目录下查看编译结果及测试结果。
+
 额外说明：
 **具体来说，run_all_tests可以快捷启动Java与C++实验部分的测试。**
 **对于Java实施测试部分（run_all_tests.sh中3到5行）**
