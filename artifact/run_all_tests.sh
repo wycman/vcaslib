@@ -16,3 +16,4 @@ printf "\nTesting BST:\n"
 ./`hostname`.bst.rq_unsafe.out -i 50 -d 50 -k 200000 -rq 0 -rqsize 65536 -t 500 -p -nrq 36 -nwork 36 | grep -i validation
 cd ../..
 printf "\nFinished testing C++ implementations\n"
+
