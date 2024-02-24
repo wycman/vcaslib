@@ -43,7 +43,7 @@
 **详细的测试调用过程可以参见目录java下的run-tests文件，文件中70行至150行，展现了Java实现下调用文中各类算法进行测试，并评估Java实施部分性能的模块。**
 **对于C++实施测试部分（run_all_tests.sh中9到18行）**
 **分别评估C++环境下实现的Vcasbst、Epochbst及Bst算法的性能表现。**
-**在cpp/microbench目录下的run-experiment及run-experiment-memory文件中展示了进行C++算法测试时所调用的不同变量及它们之间的不同参数组合。**
+**在cpp/microbench目录下的run-experiment及run-experiment-memory文件中展示了进行C++算法测试时所调用的不同变量及它们之间的不同参数组合。测试不同数据结构在多线程环境下是否可以正常运行,例如./`hostname`.bst.rq_unsafe.out -i 50 -d 50 -k 200000 -rq 0 -rqsize 65536 -t 500 -p -nrq 36 -nwork 36 | grep -i validation命令可以测试在给定参数下BST算法C++代码实现的各功能是否可以正常调用**
 （4）复现实验结果
 	  我们汇总了实验中的一些超参数，它们可以在generate_graphs_from_paper.sh文件找到，这是一个可以快速启动并复现论文中所有实验的脚本，根据当前的服务器状况修改在复现实验时使用到的部分参数：
 	  在脚本文件中，是一系列python命令行代码，用以快捷开启实验。使用到的自定义参数包括：
@@ -60,7 +60,7 @@
 	  num_keys：它是用于预填充数据结构的键数，目的是为了使数据结构的大小在整个实验过程中保持稳定，具体可以参见论文中的详细描述。
 	  可以参考下方命令行实例：
 	  **python3 run_java_experiments_scalability.py [num_keys] [ins-del-find-rq-rqsize] [thread_list] [outputfile] [num_repeats] [runtime] [JVM memory size]** （复现图4f中的实验）
-	  **python3 run_java_experiments_scalability.py 100000        30-20-49-1-1024          [1,4,16]     graph1.png       5                       5              300G** 
+	  **python3 run_java_experiments_scalability.py 100000        30-20-49-1-1024          [1,4,16]     graph1.png       5           5     300G** 
 
 （5）在运行前，请依据您使用计算机的cpu核心数、主内存大小修改Mem、threads_list及worker_threads_4k。
 	 然后运行脚本文件generate_graphs_from_paper.sh以复现论文中所有实验结果并绘制相应图表输出：
